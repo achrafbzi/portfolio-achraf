@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Achraf Bzi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AB<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Formations &amp; Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── PROJETS ───────────────────────────────────────────────── -->
+  <section id="projects" class="page-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / Projets</span>
+        <h2>Mes réalisations</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card featured" data-category="web">
+          <div class="project-badge">Projet en ligne</div>
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="project-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <h3>DUNE WAVE</h3>
+          <p>Site créé en première année de BTS avec Visual Studio Code. Simulation d'une plateforme de gestion de logement avec authentification simple et interface intuitive.</p>
+          <div class="project-footer">
+            <a href="https://dune-wave.vercel.app/" target="_blank" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le site</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="réseau">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <div class="project-tags">
+              <span class="tag">Windows Server</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Zabbix</span>
+              <span class="tag">PowerShell</span>
+            </div>
+          </div>
+          <h3>Projet FA — Architecture réseau multisite</h3>
+          <p>Architecture réseau multisite réalisée en groupe. Mise en place de segmentations LAN/DMZ, déploiement de serveurs Linux et Windows Server, automatisation via PowerShell et supervision avec Zabbix.</p>
+          <div class="project-footer">
+            <a href="projet-fa.html" class="project-link"><i class="fa-solid fa-arrow-right"></i> Détails</a>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="sécurité">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="project-tags">
+              <span class="tag">pfSense</span>
+              <span class="tag">SquidGuard</span>
+              <span class="tag">DMZ</span>
+            </div>
+          </div>
+          <h3>Projet Fruit — Infrastructure avancée 2ᵉ année</h3>
+          <p>Conception d'un plan d'adressage réseau, mise en place d'une architecture à double pare-feu pfSense, filtrage web via SquidGuard, ainsi que déploiement et sécurisation de serveurs web publics et privés.</p>
+          <div class="project-footer">
+            <a href="#" class="project-link"><i class="fa-solid fa-arrow-right"></i> Détails</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

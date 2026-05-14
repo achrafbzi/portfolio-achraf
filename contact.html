@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Achraf Bzi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AB<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Formations &amp; Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────────── -->
+  <section id="contact" class="page-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">06 / Contact</span>
+        <h2>Travaillons ensemble</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>Vous avez une opportunité de stage ou d'alternance ? Vous cherchez un administrateur réseau &amp; systèmes motivé ? N'hésitez pas à me contacter !</p>
+          <div class="contact-cards">
+            <a href="mailto:Achrafbzi011@gmail.com" class="contact-card">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">Achrafbzi011@gmail.com</span>
+              </div>
+            </a>
+            <a href="tel:0641422763" class="contact-card">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <span class="contact-label">Téléphone</span>
+                <span class="contact-value">06 41 42 27 63</span>
+              </div>
+            </a>
+            <a href="https://dune-wave.vercel.app/" target="_blank" class="contact-card">
+              <i class="fa-solid fa-globe"></i>
+              <div>
+                <span class="contact-label">Projet en ligne</span>
+                <span class="contact-value">dune-wave.vercel.app</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nom complet</label>
+              <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Adresse email</label>
+              <input type="email" id="email" name="email" placeholder="jean@exemple.fr" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Proposition de stage" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+          </button>
+          <p class="form-success" id="formSuccess">✅ Message envoyé avec succès !</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

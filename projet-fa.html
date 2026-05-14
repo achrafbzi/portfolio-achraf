@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet FA — Achraf Bzi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project-detail.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AB<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Formations &amp; Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO PROJET ──────────────────────────────────────────── -->
+  <section class="pd-hero">
+    <div class="pd-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container pd-hero-content">
+      <a href="projects.html" class="pd-back">
+        <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+      </a>
+      <div class="pd-meta">
+        <span class="pd-cat"><i class="fa-solid fa-network-wired"></i> Réseau &amp; Systèmes</span>
+        <span class="pd-year"><i class="fa-solid fa-calendar"></i> 2024 — 2025</span>
+        <span class="pd-type"><i class="fa-solid fa-users"></i> Projet collectif</span>
+      </div>
+      <h1>Projet FA</h1>
+      <p class="pd-subtitle">Modernisation de l'infrastructure informatique du Musée Gallo-Romain de Fâ</p>
+      <div class="pd-tags">
+        <span class="tag">Windows Server</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">pfSense</span>
+        <span class="tag">Zabbix</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">VLAN</span>
+        <span class="tag">DMZ</span>
+        <span class="tag">Kanboard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTENU ──────────────────────────────────────────────── -->
+  <main class="pd-main">
+    <div class="container pd-grid">
+
+      <!-- ── Colonne principale ─────────────────────────── -->
+      <div class="pd-content">
+
+        <!-- Contexte -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-circle-info"></i> Contexte du projet</h2>
+          <p>
+            Ce projet collectif avait pour objectif de <strong>moderniser l'infrastructure
+            informatique du Musée Gallo-Romain de Fâ</strong>, une organisation répartie
+            sur deux sites distincts :
+          </p>
+          <ul class="pd-list">
+            <li><strong>Le siège administratif</strong> situé à <strong>Royan</strong></li>
+            <li><strong>Le parc archéologique</strong> implanté à <strong>Fâ</strong></li>
+          </ul>
+          <p>
+            Le but principal était de respecter un cahier des charges exigeant, en assurant
+            un <strong>haut niveau de sécurité</strong>, une <strong>disponibilité des
+            services à 99 %</strong>, ainsi qu'une utilisation fluide et intuitive pour
+            l'ensemble des collaborateurs.
+          </p>
+        </section>
+
+        <!-- Méthode de travail -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-list-check"></i> Méthode de travail</h2>
+          <p>
+            L'utilisation de la méthode <strong>Kanboard</strong> a permis d'améliorer
+            l'organisation du projet en offrant une vision claire et en temps réel de
+            l'avancement des tâches, tout en facilitant la collaboration et la gestion
+            des priorités au sein de l'équipe.
+          </p>
+          <a href="https://sio.lycee-saint-john-perse.fr/kanboard/?controller=BoardViewController&action=show&project_id=125"
+             target="_blank" class="pd-external-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Voir le tableau Kanboard
+          </a>
+        </section>
+
+        <!-- Architecture réseau -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-diagram-project"></i> Architecture réseau</h2>
+          <p>
+            L'infrastructure a été conçue pour interconnecter les deux sites de façon sécurisée
+            via un <strong>tunnel VPN site-à-site</strong>, avec une segmentation réseau claire
+            par VLANs.
+          </p>
+          <div class="pd-archi-grid">
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-building"></i></div>
+              <h4>Site Royan</h4>
+              <ul>
+                <li>Réseau LAN administratif</li>
+                <li>Serveur Active Directory principal</li>
+                <li>Pare-feu pfSense (passerelle)</li>
+                <li>VLAN direction / VLAN staff</li>
+              </ul>
+            </div>
+            <div class="pd-archi-card pd-archi-card--vpn">
+              <div class="pd-archi-icon"><i class="fa-solid fa-lock"></i></div>
+              <h4>Lien inter-sites</h4>
+              <ul>
+                <li>Tunnel VPN site-à-site</li>
+                <li>Chiffrement des flux</li>
+                <li>Routage inter-VLAN sécurisé</li>
+              </ul>
+            </div>
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-monument"></i></div>
+              <h4>Site Fâ (Parc)</h4>
+              <ul>
+                <li>Réseau LAN visiteurs / staff</li>
+                <li>Contrôleur de domaine secondaire</li>
+                <li>Pare-feu pfSense local</li>
+                <li>DMZ pour services publics</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Schéma réseau -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-image"></i> Schéma de l'infrastructure</h2>
+          <div class="pd-image-container">
+            <img src="image/shema-reseau.PNG" alt="Schéma réseau du Musée Gallo-Romain de Fâ" class="pd-detail-image" />
+          </div>
+        </section>
+
+        <!-- Réalisations techniques -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-screwdriver-wrench"></i> Réalisations techniques</h2>
+          <div class="pd-realizations">
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-brands fa-windows"></i></div>
+              <div>
+                <h4>Active Directory &amp; GPO</h4>
+                <p>Déploiement d'un domaine Windows Server avec gestion des utilisateurs, des groupes et des stratégies de groupe (GPO) pour l'ensemble du personnel des deux sites.</p>
+              </div>
+            </div>
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+              <div>
+                <h4>Pare-feu pfSense</h4>
+                <p>Configuration des règles de filtrage, NAT, et du tunnel VPN site-à-site entre Royan et Fâ pour sécuriser les communications inter-sites.</p>
+              </div>
+            </div>
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-solid fa-sitemap"></i></div>
+              <div>
+                <h4>Segmentation LAN / DMZ</h4>
+                <p>Mise en place de VLANs pour isoler les réseaux administratif, visiteurs et serveurs. Déploiement d'une DMZ pour héberger les services accessibles depuis l'extérieur.</p>
+              </div>
+            </div>
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-brands fa-linux"></i></div>
+              <div>
+                <h4>Serveurs Linux</h4>
+                <p>Installation et configuration de serveurs Linux Debian pour les services réseau (DNS, DHCP, partage de fichiers Samba) sur les deux sites.</p>
+              </div>
+            </div>
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <div>
+                <h4>Supervision avec Zabbix</h4>
+                <p>Déploiement de Zabbix pour superviser en temps réel l'ensemble des équipements réseau et serveurs des deux sites, avec alertes automatiques.</p>
+              </div>
+            </div>
+
+            <div class="pd-realization-item">
+              <div class="pd-realization-icon"><i class="fa-solid fa-terminal"></i></div>
+              <div>
+                <h4>Automatisation PowerShell</h4>
+                <p>Développement de scripts PowerShell pour automatiser la création de comptes utilisateurs, la gestion des droits et les tâches d'administration répétitives.</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Compétences mobilisées -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-graduation-cap"></i> Compétences BTS SIO mobilisées</h2>
+          <div class="pd-competences">
+            <div class="pd-comp-item">
+              <span class="pd-comp-code">B1.1</span>
+              <span class="pd-comp-label">Recenser et identifier les ressources numériques</span>
+            </div>
+            <div class="pd-comp-item">
+              <span class="pd-comp-code">B2.2</span>
+              <span class="pd-comp-label">Gérer des sauvegardes et assurer la continuité de service</span>
+            </div>
+            <div class="pd-comp-item">
+              <span class="pd-comp-code">B2.3</span>
+              <span class="pd-comp-label">Mettre en place et vérifier les niveaux d'habilitation associés à un service</span>
+            </div>
+            <div class="pd-comp-item">
+              <span class="pd-comp-code">B3.2</span>
+              <span class="pd-comp-label">Déployer un service</span>
+            </div>
+            <div class="pd-comp-item">
+              <span class="pd-comp-code">B3.3</span>
+              <span class="pd-comp-label">Exploiter et maintenir les ressources numériques</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- ── Sidebar ─────────────────────────────────── -->
+      <aside class="pd-sidebar">
+
+        <div class="pd-sidebar-card">
+          <h3>Informations</h3>
+          <ul class="pd-info-list">
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <div><span>Année</span><strong>2024 — 2025</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i>
+              <div><span>Type</span><strong>Projet collectif</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-school"></i>
+              <div><span>Établissement</span><strong>Lycée Saint-John Perse</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div><span>Sites concernés</span><strong>Royan &amp; Fâ</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-bullseye"></i>
+              <div><span>Disponibilité cible</span><strong>99%</strong></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Technologies utilisées</h3>
+          <div class="pd-tech-list">
+            <span class="badge-tech"><i class="fa-brands fa-windows"></i> Windows Server</span>
+            <span class="badge-tech"><i class="fa-brands fa-linux"></i> Linux Debian</span>
+            <span class="badge-tech"><i class="fa-solid fa-fire-flame-curved"></i> pfSense</span>
+            <span class="badge-tech"><i class="fa-solid fa-sitemap"></i> VLAN / DMZ</span>
+            <span class="badge-tech"><i class="fa-solid fa-lock"></i> VPN site-à-site</span>
+            <span class="badge-tech"><i class="fa-solid fa-chart-line"></i> Zabbix</span>
+            <span class="badge-tech"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+            <span class="badge-tech"><i class="fa-solid fa-folder-tree"></i> Active Directory</span>
+            <span class="badge-tech"><i class="fa-solid fa-database"></i> DNS / DHCP</span>
+            <span class="badge-tech"><i class="fa-solid fa-list-check"></i> Kanboard</span>
+          </div>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Lien utile</h3>
+          <a href="https://sio.lycee-saint-john-perse.fr/kanboard/?controller=BoardViewController&action=show&project_id=125"
+             target="_blank" class="pd-sidebar-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Tableau Kanboard du projet
+          </a>
+        </div>
+
+        <a href="projects.html" class="btn btn-outline btn-full" style="margin-top:8px;">
+          <i class="fa-solid fa-arrow-left"></i> Tous les projets
+        </a>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ── Modal image ─────────────────────────────── -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="closeModal" aria-label="Fermer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" alt="" class="image-modal-img" id="modalImage" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
