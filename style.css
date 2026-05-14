@@ -29,7 +29,7 @@
   --transition: .3s cubic-bezier(.4,0,.2,1);
 }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 17px; }
 
 body {
   font-family: var(--font);
@@ -396,7 +396,7 @@ section:nth-child(even) { background: var(--bg-2); }
   animation: fadeInDown .6s ease both;
 }
 #hero h1 {
-  font-size: clamp(2.5rem, 7vw, 3.8rem);
+  font-size: clamp(2.8rem, 7vw, 4.2rem);
   font-weight: 800;
   color: #fff;
   line-height: 1.05;
@@ -406,7 +406,7 @@ section:nth-child(even) { background: var(--bg-2); }
 }
 h1 .accent { color: var(--primary); }
 .hero-sub {
-  font-size: clamp(1rem, 2.3vw, 1.25rem);
+  font-size: clamp(1.05rem, 2.3vw, 1.35rem);
   font-weight: 500;
   color: var(--accent);
   margin-bottom: 12px;
@@ -414,11 +414,11 @@ h1 .accent { color: var(--primary); }
   animation: fadeInUp .6s .2s ease both;
 }
 .hero-desc {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--text-muted);
   max-width: 580px;
   margin: 0 auto 24px;
-  line-height: 1.5;
+  line-height: 1.6;
   animation: fadeInUp .6s .3s ease both;
 }
 .hero-actions {
