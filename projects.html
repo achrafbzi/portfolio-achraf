@@ -89,6 +89,77 @@
           </div>
         </article>
 
+        <article class="project-card" data-category="réseau">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-sitemap"></i></div>
+            <div class="project-tags">
+              <span class="tag">pfSense</span>
+              <span class="tag">Active Directory</span>
+              <span class="tag">Nextcloud</span>
+              <span class="tag">Asterisk</span>
+            </div>
+          </div>
+          <h3>Projet Technova — Infrastructure réseau</h3>
+          <p>Projet réalisé pour l'épreuve BTS SIO SISR 2026 : conception et déploiement d'une infrastructure segmentée (WAN / LAN / DMZ) avec contrôleur de domaine, serveur de fichiers Nextcloud, téléphonie Asterisk et serveur web en DMZ.</p>
+          <div class="project-footer">
+            <a href="projet-technova.html" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Voir la fiche</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+  
+  <section id="technova" class="project-detail page-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technova</span>
+        <h2>Projet d'infrastructure — Technova Solutions</h2>
+      </div>
+
+      <div class="project-content">
+        <h3>Présentation</h3>
+        <p>Technova Solutions souhaite moderniser son infrastructure pour séparer les services internes et externes, centraliser la gestion des utilisateurs et sécuriser l'accès aux ressources.</p>
+
+        <h3>Schéma &amp; plan d'adressage</h3>
+        <p>Schéma réseau (WAN / LAN / DMZ) et plan d'adressage utilisé pour la conception :</p>
+        <div class="diagram">
+          <img alt="Schéma réseau Technova" src="https://media.canva.com/v2/image-resize/format:PNG/height:533/quality:100/uri:ifs%3A%2F%2FM%2F6e4e6052-7033-411f-889e-6a187708f897/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAIpBryEXGZIt12K7QLHdaKhblgnpcSJb4h9_u_qjtCdc&exp=1779242078&osig=AAAAAAAAAAAAAAAAAAAAAEs9p8rT6EarFcOcO4scMfpp9vvW9WRmFMbLOtqU4hHU&signer=media-rpc&x-canva-quality=screen">
+        </div>
+        <ul>
+          <li><strong>WAN :</strong> 172.31.4.128 (publique / NAT)</li>
+          <li><strong>LAN :</strong> 192.168.2.0/24 — passerelle 192.168.2.1</li>
+          <li><strong>DMZ :</strong> 192.168.3.0/24 — passerelle 192.168.3.1</li>
+        </ul>
+
+        <h3>Serveurs déployés</h3>
+        <ul>
+          <li><strong>WinServ2025 (AD DS, DNS)</strong> — 192.168.2.6 — Domaine : www.technova.local</li>
+          <li><strong>Nextcloud</strong> — 192.168.2.4 — stockage et partage centralisé</li>
+          <li><strong>Asterisk</strong> — 192.168.2.5 — téléphonie IP interne</li>
+          <li><strong>Serveur web (DMZ)</strong> — 192.168.3.2 (accès WAN : 172.31.4.128)</li>
+          <li><strong>pfSense</strong> — WAN 172.31.4.128 / LAN 192.168.2.1 / DMZ 192.168.3.1</li>
+        </ul>
+
+        <h3>Gestion utilisateurs &amp; GPO</h3>
+        <p>Groupes : Direction, RH, IT, Employés. Principales GPO mises en place :</p>
+        <ul>
+          <li>Politique de mot de passe</li>
+          <li>Blocage après tentatives échouées</li>
+          <li>Restriction du panneau de configuration et de l'invite de commandes</li>
+          <li>Déploiement automatique de lecteurs réseau selon les groupes</li>
+        </ul>
+
+        <h3>Partage &amp; sécurité</h3>
+        <p>Les lecteurs réseau sont assignés par groupe et les permissions AD contrôlent l'accès aux dossiers partagés. Le serveur web est isolé en DMZ pour limiter les risques côté WAN.</p>
+
+        <h3>Automatisation</h3>
+        <p>Automatisations PowerShell pour la création de comptes, le déploiement de lecteurs et d'autres tâches d'administration.</p>
+
+        <h3>Conclusion</h3>
+        <p>Compétences mobilisées : administration Windows/Linux, AD, pfSense, segmentation réseau, Nextcloud, Asterisk, scripts PowerShell.</p>
+
+        <p>Source du contenu : <a href="https://www.canva.com/design/DAHJXpXkVsM/kiwCiwPorPfM0peN1Aug-g/view?utm_content=DAHJXpXkVsM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks">Document Canva du projet</a></p>
       </div>
     </div>
   </section>

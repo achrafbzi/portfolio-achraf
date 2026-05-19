@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Technova — Achraf Bzi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project-detail.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AB<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Formations &amp; Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO PROJET ──────────────────────────────────────────── -->
+  <section class="pd-hero">
+    <div class="pd-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container pd-hero-content">
+      <a href="projects.html" class="pd-back">
+        <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+      </a>
+      <div class="pd-meta">
+        <span class="pd-cat"><i class="fa-solid fa-network-wired"></i> Réseau &amp; Systèmes</span>
+        <span class="pd-year"><i class="fa-solid fa-calendar"></i> 2026</span>
+        <span class="pd-type"><i class="fa-solid fa-person-chalkboard"></i> Épreuve BTS (projet)</span>
+      </div>
+      <h1>Projet Technova</h1>
+      <p class="pd-subtitle">Conception et déploiement d'une infrastructure segmentée (WAN / LAN / DMZ) pour Technova Solutions.</p>
+      <div class="pd-tags">
+        <span class="tag">pfSense</span>
+        <span class="tag">Active Directory</span>
+        <span class="tag">Nextcloud</span>
+        <span class="tag">Asterisk</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">DMZ</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTENU ──────────────────────────────────────────────── -->
+  <main class="pd-main">
+    <div class="container pd-grid">
+
+      <!-- ── Colonne principale ─────────────────────────── -->
+      <div class="pd-content">
+
+        <!-- Contexte et Objectif -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-circle-info"></i> Contexte &amp; Objectif</h2>
+          <p>
+            Technova Solutions souhaitait moderniser son infrastructure réseau afin de
+            séparer les services internes et accessibles depuis Internet, centraliser
+            la gestion des utilisateurs via Active Directory, et sécuriser les accès
+            grâce à des stratégies (GPO) et une segmentation réseau (LAN / DMZ).
+          </p>
+        </section>
+
+        <!-- Schéma réseau -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-image"></i> Schéma de l'infrastructure</h2>
+          <div class="pd-image-container">
+            <img src="image/projet-technova.png" alt="Schéma réseau Technova" class="pd-detail-image" />
+          </div>
+          <p>Le schéma montre la segmentation WAN / LAN / DMZ, le pare-feu pfSense, et l'emplacement des différents serveurs.</p>
+        </section>
+
+        <!-- Composants et Services -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-cubes"></i> Composants &amp; Services</h2>
+          <div class="pd-archi-grid">
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-server"></i></div>
+              <h4>WinServ2025 (AD)</h4>
+              <ul>
+                <li>IP : 192.168.2.6</li>
+                <li>Rôles : AD DS, DNS, gestion des utilisateurs et GPO</li>
+                <li>Domaine : www.technova.local</li>
+              </ul>
+            </div>
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-cloud"></i></div>
+              <h4>Nextcloud</h4>
+              <ul>
+                <li>IP : 192.168.2.4</li>
+                <li>Stockage centralisé et partages par groupe</li>
+                <li>Quotas et permissions gérés via AD</li>
+              </ul>
+            </div>
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-phone"></i></div>
+              <h4>Asterisk (téléphonie)</h4>
+              <ul>
+                <li>IP : 192.168.2.5</li>
+                <li>Comptes SIP et appels internes</li>
+                <li>Softphones : 3CX-phone</li>
+              </ul>
+            </div>
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <h4>pfSense</h4>
+              <ul>
+                <li>WAN : 172.31.4.128</li>
+                <li>LAN : 192.168.2.1</li>
+                <li>DMZ : 192.168.3.1</li>
+                <li>Filtrage, NAT, segmentation et règles d'accès</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Déploiements et GPO -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-user-cog"></i> Gestion utilisateurs &amp; GPO</h2>
+          <p>Groupes créés : Direction, RH, IT, Employés. GPO mises en place pour :</p>
+          <ul class="pd-list">
+            <li>Politique de mot de passe</li>
+            <li>Verrouillage après tentatives échouées</li>
+            <li>Restriction du panneau de configuration et de l'invite de commandes</li>
+            <li>Déploiement automatique de lecteurs réseau par groupe</li>
+          </ul>
+        </section>
+
+        <!-- Sécurité et Partage -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-lock"></i> Sécurité &amp; Partage</h2>
+          <p>Les ressources partagées sont protégées par les permissions AD. Le serveur web public est isolé en DMZ pour limiter l'exposition depuis le WAN.</p>
+        </section>
+
+        <!-- Automatisation -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-terminal"></i> Automatisation</h2>
+          <p>Scripts PowerShell pour automatiser la création de comptes, l'assignation des lecteurs réseau et d'autres tâches d'administration.</p>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-check-circle"></i> Conclusion</h2>
+          <p>Ce projet a permis de mettre en pratique des compétences en administration Windows et Linux, configuration de pare-feu, segmentation réseau, téléphonie IP et automatisation.</p>
+        </section>
+
+      </div>
+
+      <!-- ── Sidebar ─────────────────────────────────── -->
+      <aside class="pd-sidebar">
+
+        <div class="pd-sidebar-card">
+          <h3>Informations</h3>
+          <ul class="pd-info-list">
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <div><span>Année</span><strong>2026</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-user-graduate"></i>
+              <div><span>Type</span><strong>Épreuve BTS SIO SISR</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-person"></i>
+              <div><span>Auteur</span><strong>Achraf Bzi</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-globe"></i>
+              <div><span>Domaine</span><strong>www.technova.local</strong></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Technologies utilisées</h3>
+          <div class="pd-tech-list">
+            <span class="badge-tech"><i class="fa-brands fa-windows"></i> Windows Server</span>
+            <span class="badge-tech"><i class="fa-brands fa-linux"></i> Linux</span>
+            <span class="badge-tech"><i class="fa-solid fa-fire-flame-curved"></i> pfSense</span>
+            <span class="badge-tech"><i class="fa-solid fa-cloud"></i> Nextcloud</span>
+            <span class="badge-tech"><i class="fa-solid fa-phone"></i> Asterisk</span>
+            <span class="badge-tech"><i class="fa-solid fa-terminal"></i> PowerShell</span>
+            <span class="badge-tech"><i class="fa-solid fa-lock"></i> GPO</span>
+          </div>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Ressource</h3>
+          <a href="https://www.canva.com/design/DAHJXpXkVsM/kiwCiwPorPfM0peN1Aug-g/view?utm_content=DAHJXpXkVsM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks"
+             target="_blank" class="pd-sidebar-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            Document Canva du projet
+          </a>
+        </div>
+
+        <a href="projects.html" class="btn btn-outline btn-full" style="margin-top:8px;">
+          <i class="fa-solid fa-arrow-left"></i> Tous les projets
+        </a>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ── Modal image ─────────────────────────────── -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="closeModal" aria-label="Fermer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" alt="" class="image-modal-img" id="modalImage" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
