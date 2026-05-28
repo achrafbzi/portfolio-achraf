@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projet Alpy — Achraf Bzi</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="project-detail.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ─── NAVIGATION ──────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="index.html">AB<span class="dot">.</span></a>
+      <ul class="nav-links">
+        <li><a href="about.html">À propos</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="veille.html">Veille</a></li>
+        <li><a href="certifications.html">Formations &amp; Stages</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ─── HERO PROJET ──────────────────────────────────────────── -->
+  <section class="pd-hero">
+    <div class="pd-hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container pd-hero-content">
+      <a href="projects.html" class="pd-back">
+        <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+      </a>
+      <div class="pd-meta">
+        <span class="pd-cat"><i class="fa-solid fa-shield-halved"></i> Sécurité &amp; Réseau</span>
+        <span class="pd-year"><i class="fa-solid fa-calendar"></i> 2024 — 2025</span>
+        <span class="pd-type"><i class="fa-solid fa-person"></i> Projet individuel</span>
+      </div>
+      <h1>Projet Alpy</h1>
+      <p class="pd-subtitle">Déploiement d'une infrastructure réseau sécurisée multi-tiers avec pfSense, DMZ WordPress et base de données isolée en LAN.</p>
+      <div class="pd-tags">
+        <span class="tag">pfSense</span>
+        <span class="tag">Debian</span>
+        <span class="tag">Nginx</span>
+        <span class="tag">MariaDB</span>
+        <span class="tag">WordPress</span>
+        <span class="tag">DMZ</span>
+        <span class="tag">LAN</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTENU ──────────────────────────────────────────────── -->
+  <main class="pd-main">
+    <div class="container pd-grid">
+
+      <!-- ── Colonne principale ─────────────────────────── -->
+      <div class="pd-content">
+
+        <!-- Contexte et Objectif -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-circle-info"></i> Contexte &amp; Objectif</h2>
+          <p>
+            Le projet <strong>Alpy</strong> consiste à concevoir et déployer une infrastructure réseau sécurisée et segmentée afin d'héberger un site web public <strong>WordPress</strong> tout en protégeant les données sensibles et les ressources d'administration interne. 
+          </p>
+          <p>
+            Pour répondre aux exigences de sécurité industrielles, l'architecture sépare les flux publics et privés en isolant le serveur web dans une <strong>DMZ</strong> et le serveur de base de données dans le <strong>LAN</strong>. L'accès externe est filtré et redirigé par un pare-feu <strong>pfSense</strong>, limitant l'exposition aux attaques.
+          </p>
+        </section>
+
+        <!-- Schéma réseau -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-image"></i> Schéma de l'infrastructure</h2>
+          <div class="pd-image-container">
+            <img src="image/shema-reseau-alpy.png" alt="Schéma réseau Projet Alpy" class="pd-detail-image" />
+          </div>
+          <p class="pd-image-desc" style="font-size: 0.85rem; color: var(--text-light); text-align: center; margin-top: -10px;">
+          </p>
+        </section>
+
+        <!-- Plan d'adressage -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-sitemap"></i> Plan d'adressage réseau</h2>
+          <p>L'infrastructure est segmentée en trois zones distinctes gérées par le pare-feu pfSense :</p>
+          <ul class="pd-list">
+            <li><strong>WAN (Internet) :</strong> IP attribuée par DHCP (ex: 172.31.4.144) - Interface <code>em0</code></li>
+            <li><strong>DMZ (Zone Démilitarisée) :</strong> Réseau <code>192.168.1.0/30</code> — Passerelle <code>192.168.1.1</code> - Interface <code>em2</code></li>
+            <li><strong>LAN (Réseau Interne) :</strong> Réseau <code>192.168.2.0/24</code> — Passerelle <code>192.168.2.1</code> - Interface <code>em1</code></li>
+          </ul>
+        </section>
+
+        <!-- Composants et Services -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-cubes"></i> Composants &amp; Services</h2>
+          <div class="pd-archi-grid">
+            
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-brands fa-wordpress"></i></div>
+              <h4>Web Server (Debian)</h4>
+              <ul>
+                <li>Nom : B2i-wp</li>
+                <li>IP : 192.168.1.2/30 (DMZ)</li>
+                <li>Passerelle : 192.168.1.1</li>
+                <li>Services : Nginx, PHP-FPM, phpMyAdmin, WordPress</li>
+              </ul>
+            </div>
+
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-database"></i></div>
+              <h4>Database Server (Debian)</h4>
+              <ul>
+                <li>Nom : Bzi-db</li>
+                <li>IP : 192.168.2.4/24 (LAN)</li>
+                <li>Passerelle : 192.168.2.1</li>
+                <li>Services : MariaDB Server (écoute sur 0.0.0.0, base de données 'wordpress' et utilisateur dédié)</li>
+              </ul>
+            </div>
+
+            <div class="pd-archi-card">
+              <div class="pd-archi-icon"><i class="fa-solid fa-desktop"></i></div>
+              <h4>Admin PC (Windows 11)</h4>
+              <ul>
+                <li>Nom : bzi-adm</li>
+                <li>IP : 192.168.2.2/24 (LAN)</li>
+                <li>DNS : 192.168.2.3</li>
+                <li>Services : RDP (Bureau à distance) activé pour la gestion centralisée</li>
+              </ul>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Sécurité et Règles de Pare-feu -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-shield-halved"></i> Sécurité &amp; Filtrage (pfSense)</h2>
+          <p>Des règles strictes ont été configurées sur pfSense pour assurer le cloisonnement des zones :</p>
+          <ul class="pd-list">
+            <li><strong>Flux LAN vers TOUT :</strong> Autorisation complète du trafic sortant depuis le réseau interne vers Internet et la DMZ pour l'administration et les mises à jour.</li>
+            <li><strong>Flux DMZ vers WAN uniquement :</strong> Restriction stricte autorisant uniquement les ports HTTP/HTTPS vers Internet. Tout le reste est bloqué. **La DMZ n'a aucun accès vers le LAN**.</li>
+            <li><strong>NAT &amp; Port Forward :</strong> Redirection du trafic HTTP/HTTPS entrant sur l'interface WAN vers le serveur WordPress en DMZ (`192.168.1.2`).</li>
+          </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="pd-section">
+          <h2><i class="fa-solid fa-check-circle"></i> Conclusion</h2>
+          <p>
+            Ce projet met en évidence les meilleures pratiques en matière de conception réseau sécurisée : la séparation physique et logique des applications web et de leurs données (multi-tiers), l'application du principe du moindre privilège via les règles du pare-feu pfSense, et l'administration centralisée sécurisée.
+          </p>
+        </section>
+
+      </div>
+
+      <!-- ── Sidebar ─────────────────────────────────── -->
+      <aside class="pd-sidebar">
+
+        <div class="pd-sidebar-card">
+          <h3>Informations</h3>
+          <ul class="pd-info-list">
+            <li>
+              <i class="fa-solid fa-calendar-days"></i>
+              <div><span>Année</span><strong>2024 — 2025</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <div><span>Type</span><strong>Projet d'infrastructure</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-school"></i>
+              <div><span>Établissement</span><strong>Lycée Saint-John Perse</strong></div>
+            </li>
+            <li>
+              <i class="fa-solid fa-bullseye"></i>
+              <div><span>Objectif</span><strong>Sécurisation multi-tiers</strong></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Technologies utilisées</h3>
+          <div class="pd-tech-list">
+            <span class="badge-tech"><i class="fa-solid fa-fire-flame-curved"></i> pfSense</span>
+            <span class="badge-tech"><i class="fa-brands fa-linux"></i> Debian Linux</span>
+            <span class="badge-tech"><i class="fa-solid fa-globe"></i> Nginx Web Server</span>
+            <span class="badge-tech"><i class="fa-solid fa-database"></i> MariaDB / SQL</span>
+            <span class="badge-tech"><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            <span class="badge-tech"><i class="fa-solid fa-sitemap"></i> DMZ &amp; LAN</span>
+            <span class="badge-tech"><i class="fa-brands fa-windows"></i> Windows 11 RDP</span>
+          </div>
+        </div>
+
+        <div class="pd-sidebar-card">
+          <h3>Ressources</h3>
+          <span style="font-size: 0.85rem; color: var(--text-muted); display: block; line-height: 1.5;">
+            Documentation d'installation et de configuration réseau stockée en local.
+          </span>
+        </div>
+
+        <a href="projects.html" class="btn btn-outline btn-full" style="margin-top:8px;">
+          <i class="fa-solid fa-arrow-left"></i> Tous les projets
+        </a>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- ── Modal image ─────────────────────────────── -->
+  <div class="image-modal" id="imageModal">
+    <div class="image-modal-content">
+      <button class="image-modal-close" id="closeModal" aria-label="Fermer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img src="" alt="" class="image-modal-img" id="modalImage" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -82,6 +82,8 @@
 /* ── Sections contenu ─────────────────────────────── */
 .pd-section {
   margin-bottom: 52px;
+  background: transparent !important;
+  padding: 0 !important;
 }
 .pd-section h2 {
   display: flex;
