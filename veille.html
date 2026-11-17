@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veille technologique — Achraf Bzi</title>
+  <meta name="description" content="Veille technologique Zero Trust : architecture, ZTNA, MFA, Microsoft Entra et segmentation réseau — BTS SIO SISR." />
+  <title>Veille Zero Trust — Achraf Bzi</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,7 +12,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-
   <nav id="navbar">
     <div class="nav-inner">
       <a class="logo" href="index.html">AB<span class="dot">.</span></a>
@@ -23,9 +23,7 @@
         <li><a href="certifications.html">Formations &amp; Stages</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -34,102 +32,110 @@
       <div class="section-header">
         <span class="section-tag">04 / Veille</span>
         <h1>Ma Veille Technologique</h1>
-        <h2>L’intelligence artificielle dans la cybersécurité</h2>
+        <h2>Zero Trust : repenser la sécurité des réseaux et des accès</h2>
+        <p class="section-subtitle">BTS SIO option SISR · Suivi des évolutions en cybersécurité · Octobre–novembre 2026</p>
       </div>
 
       <div class="veille-block">
-        <h3>Introduction</h3>
-        <p>Dans cette veille, je présente une synthèse sur l’<strong>intelligence artificielle</strong> et la <strong>cybersécurité</strong>. L’intelligence artificielle désigne des systèmes capables d’analyser des données, de détecter des modèles et de prendre des décisions automatiques. La cybersécurité concerne la protection des réseaux, des systèmes et des informations contre les attaques et les intrusions.</p>
-        <p>Le lien entre l’IA et la cybersécurité est de plus en plus fort : l’IA peut aider à repérer des attaques avant qu’elles ne se propagent, tout en étant utilisée par des attaquants pour rendre leurs méthodes plus sophistiquées. Ce sujet est important aujourd’hui parce que les organisations doivent réagir plus vite face à des cybermenaces complexes et en constante évolution.</p>
+        <h3><i class="fa-solid fa-shield-halved"></i> Introduction : qu'est-ce que le Zero Trust ?</h3>
+        <p>Le <strong>Zero Trust</strong> (« confiance zéro ») est une approche de cybersécurité qui repose sur un principe : <strong>ne jamais accorder une confiance automatique à un utilisateur ou à un équipement</strong>, même lorsqu'il se trouve déjà sur le réseau interne de l'entreprise.</p>
+        <p>Contrairement au modèle traditionnel fondé sur un périmètre réseau supposé sûr, le Zero Trust exige une vérification des identités, des appareils et des droits d'accès. Les autorisations sont limitées au strict nécessaire et réévaluées selon le contexte.</p>
+        <p>J'ai choisi ce sujet car il concerne directement l'administration des systèmes et réseaux : <strong>Active Directory, Microsoft Entra ID, MFA, pare-feu, segmentation réseau et accès distant</strong>. Il permet aussi de comprendre comment limiter les conséquences d'un compte compromis ou d'une intrusion.</p>
       </div>
 
       <div class="veille-block">
-        <h3>Méthodologie et Outils de Veille</h3>
-        <p>Pour construire cette veille, j’ai utilisé des sources fiables pour suivre l’actualité technique et les publications des experts en sécurité :</p>
+        <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Méthodologie et outils de veille</h3>
+        <p>J'utilise <strong>Google Alertes</strong> pour recevoir par e-mail des publications sur le Zero Trust. Les messages sont regroupés dans le libellé Gmail <strong>« Veille BTS - Zero Trust »</strong>. Je compare les résultats, élimine les doublons et privilégie les articles apportant un éclairage technique utile à la spécialité SISR.</p>
         <ul class="veille-tools">
-          <li>Google Actualités</li>
-          <li>Alertes Google</li>
-          <li>Cybermalveillance.gouv.fr</li>
-          <li>ZDNet France</li>
-          <li>LeMagIT</li>
-          <li>LinkedIn</li>
-          <li>Twitter/X</li>
-          <li>Microsoft Security Blog</li>
+          <li>Google Alertes : collecte automatique</li>
+          <li>Gmail : classement des alertes</li>
+          <li>NIST : cadre de référence</li>
+          <li>Presse spécialisée et éditeurs : suivi des évolutions</li>
         </ul>
-        <p>Ces outils permettent de vérifier les tendances et de rester informé des évolutions en cybersécurité.</p>
-        <h4>Mots-clés utilisés</h4>
+        <h4>Mots-clés surveillés</h4>
         <div class="keyword-list">
-          <span class="keyword-pill">intelligence artificielle</span>
-          <span class="keyword-pill">cybersécurité</span>
-          <span class="keyword-pill">cyberattaque</span>
-          <span class="keyword-pill">phishing IA</span>
-          <span class="keyword-pill">ransomware</span>
-          <span class="keyword-pill">sécurité cloud</span>
-          <span class="keyword-pill">sécurité informatique</span>
-          <span class="keyword-pill">IA générative</span>
-          <span class="keyword-pill">Zero Trust</span>
-          <span class="keyword-pill">sécurité réseau</span>
+          <span class="keyword-pill">Zero Trust Architecture</span>
+          <span class="keyword-pill">Zero Trust cybersecurity</span>
+          <span class="keyword-pill">Zero Trust cybersécurité</span>
+          <span class="keyword-pill">Microsoft Entra Active Directory</span>
+          <span class="keyword-pill">network segmentation</span>
+          <span class="keyword-pill">IAM MFA</span>
+          <span class="keyword-pill">security breach vulnerability</span>
         </div>
+        <p><strong>Période étudiée :</strong> octobre–novembre 2026. Les dates ci-dessous correspondent à la <strong>réception des alertes Google</strong>, et non nécessairement à la publication initiale des articles.</p>
       </div>
 
       <div class="veille-block">
-        <h3>Résultats de la veille</h3>
+        <h3><i class="fa-solid fa-diagram-project"></i> Les piliers du Zero Trust</h3>
+        <article class="veille-card"><h4>1. Vérifier explicitement</h4><p>Authentifier l'utilisateur et évaluer le contexte de connexion : MFA, état de sécurité du terminal, localisation ou niveau de risque. Être connecté au réseau de l'entreprise ne suffit plus à justifier un accès.</p></article>
+        <article class="veille-card"><h4>2. Appliquer le moindre privilège</h4><p>Chaque compte ne doit disposer que des droits nécessaires à sa mission. Les accès administrateur et les identités de service nécessitent une attention particulière.</p></article>
+        <article class="veille-card"><h4>3. Limiter la propagation d'une attaque</h4><p>La segmentation et les règles de filtrage réduisent les communications inutiles entre machines. Si un poste est compromis, l'attaquant doit rencontrer d'autres contrôles avant d'accéder aux serveurs sensibles.</p></article>
+      </div>
+
+      <div class="veille-block">
+        <h3><i class="fa-solid fa-newspaper"></i> Actualités sélectionnées</h3>
+        <p>Voici une sélection d'articles repérés grâce aux alertes reçues. Les résumés présentent l'intérêt technique des sujets ; ils ne constituent pas un audit complet des articles originaux.</p>
+
         <article class="veille-card">
-          <h4>Microsoft Security Blog — Février 2026</h4>
-          <p>Microsoft présente des avancées dans l’utilisation de l’IA pour détecter automatiquement les menaces. Les algorithmes analysent des comportements anormaux sur les postes de travail et signalent des attaques avant qu’elles ne deviennent critiques.</p>
+          <h4>17 novembre 2026 (alerte) — Zero Trust et intelligence artificielle</h4>
+          <p><strong>Source : GovCIO Media &amp; Research.</strong> L'article examine comment appliquer les principes Zero Trust aux nouvelles capacités d'IA des organisations. L'enjeu est de contrôler précisément les identités, les données et les autorisations des systèmes automatisés.</p>
+          <p><strong>Intérêt SISR :</strong> appliquer le moindre privilège aux services et aux comptes techniques, et pas seulement aux utilisateurs humains.</p>
+          <p><a href="https://govciomedia.com/how-zero-trust-can-help-agencies-secure-emerging-ai-capabilities/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Lire la source <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
         </article>
+
         <article class="veille-card">
-          <h4>ZDNet France — Mars 2026</h4>
-          <p>ZDNet explique comment l’IA aide à protéger les infrastructures cloud. Les outils de sécurité cloud combinent l’analyse des logs et la surveillance des flux pour arrêter des cyberattaques plus rapidement.</p>
+          <h4>16 novembre 2026 (alerte) — Les appareils mobiles dans une stratégie Zero Trust</h4>
+          <p><strong>Source : The Hacker News.</strong> Cette publication attire l'attention sur les signaux de sécurité provenant des terminaux mobiles. Vérifier l'identité d'un utilisateur ne suffit pas si son appareil présente un risque.</p>
+          <p><strong>Intérêt SISR :</strong> comprendre le rôle de la conformité des appareils, de la gestion des terminaux et des politiques d'accès conditionnel.</p>
+          <p><a href="https://thehackernews.com/expert-insights/2026/11/the-mobile-signals-your-zero-trust.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Lire la source <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
         </article>
+
         <article class="veille-card">
-          <h4>LeMagIT — Avril 2026</h4>
-          <p>LeMagIT montre que les entreprises investissent dans des solutions de sécurité basées sur l’IA pour améliorer la détection de phishing et renforcer les défenses des réseaux. L’IA permet de traiter de grands volumes de données en temps réel.</p>
+          <h4>17 novembre 2026 (alerte) — Référence d'architecture : NIST SP 800-207</h4>
+          <p><strong>Source repérée : CASRAI, guide consacré au NIST SP 800-207.</strong> Ce document permet de revenir aux fondements du Zero Trust : protection des ressources, décisions d'accès explicites et vérification continue.</p>
+          <p><strong>Intérêt SISR :</strong> disposer d'un cadre pour justifier des choix techniques dans une infrastructure réseau. Il s'agit d'une <strong>ressource de référence</strong>, pas d'une nouveauté publiée le 17 novembre.</p>
+          <p><a href="https://csrc.nist.gov/pubs/sp/800/207/final" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consulter le NIST <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
         </article>
+
         <article class="veille-card">
-          <h4>Cybermalveillance.gouv.fr — Avril 2026</h4>
-          <p>Le site gouvernemental alerte sur l’augmentation des attaques de phishing intelligentes. Les attaques utilisent des messages personnalisés et des techniques IA pour tromper les utilisateurs et voler des identifiants.</p>
-        </article>
-        <article class="veille-card">
-          <h4>Reuters Tech — Mai 2026</h4>
-          <p>Reuters rapporte que les grandes entreprises continuent d’investir dans l’IA pour la cybersécurité. Les géants du cloud et des services informatiques renforcent leurs plateformes avec des outils de détection et d’automatisation.</p>
+          <h4>Novembre 2026 — Contrôle des accès privilégiés</h4>
+          <p><strong>Source : Zscaler.</strong> Un article sur le Privileged Remote Access illustre l'extension des contrôles Zero Trust aux systèmes sensibles et aux sessions d'administration.</p>
+          <p><strong>Intérêt SISR :</strong> sécuriser les connexions des administrateurs aux serveurs, limiter les accès permanents et réduire l'exposition des interfaces d'administration.</p>
+          <p><a href="https://www.zscaler.com/blogs/product-insights/app-access-infrastructure-control-extending-zero-trust-privileged-systems" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Lire la source <i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
         </article>
       </div>
 
       <div class="veille-block">
-        <h3>Développements récents et avancées 2026</h3>
-        <article class="veille-card">
-          <h4>L’utilisation de l’IA par les hackers</h4>
-          <p>Les cybercriminels utilisent l’IA pour créer un <strong>phishing intelligent</strong>, automatiser les attaques et générer de faux emails très réalistes. Ces outils peuvent produire rapidement des messages personnalisés et des malwares adaptés à la cible.</p>
-        </article>
-        <article class="veille-card">
-          <h4>L’automatisation de la cybersécurité</h4>
-          <p>Les équipes de sécurité adoptent l’IA pour la <strong>détection automatique</strong> et l’analyse des logs. La surveillance réseau devient plus efficace, car les systèmes peuvent bloquer des menaces en temps réel sans intervention manuelle constante.</p>
-        </article>
-        <article class="veille-card">
-          <h4>La montée du phishing avec IA</h4>
-          <p>Le phishing se modernise avec des emails réalistes et parfois des <strong>deepfakes</strong>. Les messages sont personnalisés pour tromper les employés et contournent plus facilement les protections classiques.</p>
-        </article>
-        <article class="veille-card">
-          <h4>Le modèle Zero Trust</h4>
-          <p>Le Zero Trust signifie <em>ne jamais faire confiance automatiquement</em>. Ce concept impose de vérifier chaque utilisateur et chaque appareil, ce qui renforce la sécurité réseau moderne et limite l’impact des attaques.</p>
-        </article>
+        <h3><i class="fa-solid fa-network-wired"></i> Évolutions techniques observées</h3>
+        <article class="veille-card"><h4>ZTNA : faire évoluer les accès distants</h4><p>Le <strong>Zero Trust Network Access</strong> vise à autoriser l'accès à une application ou une ressource précise plutôt qu'à ouvrir largement le réseau interne. Cette approche complète ou remplace certains usages des VPN traditionnels selon les besoins de l'organisation.</p></article>
+        <article class="veille-card"><h4>Identités : MFA, IAM et Microsoft Entra</h4><p>La sécurité repose de plus en plus sur l'identité et le contexte. L'authentification multifacteur, la gestion des rôles, les accès conditionnels et la revue des privilèges deviennent des contrôles centraux.</p></article>
+        <article class="veille-card"><h4>Microsegmentation et filtrage réseau</h4><p>Les VLAN, les règles de pare-feu et les politiques entre applications servent à limiter les déplacements latéraux. La microsegmentation va plus loin qu'une séparation simple entre LAN et DMZ en contrôlant finement les flux entre ressources.</p></article>
+        <article class="veille-card"><h4>Identités non humaines et automatisation</h4><p>Les comptes de service, applications et agents automatisés doivent aussi disposer de droits restreints. Le Zero Trust concerne donc les échanges entre machines autant que les connexions des salariés.</p></article>
       </div>
 
       <div class="veille-block">
-        <h3>Conclusion &amp; Enjeux</h3>
-        <p>Cette veille montre que l’IA transforme la cybersécurité en rendant les systèmes de défense plus rapides et plus précis. En même temps, les attaques deviennent plus sophistiquées : les outils automatisés et le phishing intelligent sont des risques réels pour les entreprises.</p>
-        <p>Les organisations doivent renforcer leurs mesures de protection, en particulier sur la sécurité cloud et la surveillance des réseaux. Pour les futurs professionnels BTS SIO, il sera essentiel de comprendre ces technologies, de savoir analyser des alertes et de gérer des solutions de sécurité assistées par l’IA.</p>
+        <h3><i class="fa-solid fa-laptop-code"></i> Application à mon parcours BTS SIO SISR</h3>
+        <p>Cette veille me permet de relier les concepts Zero Trust aux technologies étudiées pendant ma formation :</p>
+        <ul class="veille-tools">
+          <li><strong>Active Directory :</strong> comptes, groupes, droits et politiques de sécurité</li>
+          <li><strong>Microsoft 365 / Entra :</strong> identité et contrôle des accès</li>
+          <li><strong>pfSense :</strong> filtrage des communications entre zones réseau</li>
+          <li><strong>VLAN et DMZ :</strong> isolation des services et réduction de la surface d'attaque</li>
+          <li><strong>Linux / Windows Server :</strong> sécurisation des accès d'administration</li>
+        </ul>
+        <p>Un exemple concret serait de placer les serveurs dans un réseau séparé, de n'autoriser que les flux nécessaires et d'exiger une authentification renforcée pour l'administration. <strong>La segmentation seule ne constitue pas une architecture Zero Trust complète</strong> : elle doit s'accompagner de contrôles d'identité, d'autorisation et de surveillance.</p>
+      </div>
+
+      <div class="veille-block">
+        <h3><i class="fa-solid fa-flag-checkered"></i> Bilan et conclusion</h3>
+        <p>Ma veille montre que le Zero Trust n'est pas un logiciel unique, mais une <strong>stratégie de sécurité</strong> associant plusieurs technologies. Les publications suivies mettent particulièrement en avant la protection des identités, le contrôle des appareils, la sécurisation des accès distants et la limitation des privilèges.</p>
+        <p>Pour un futur professionnel SISR, l'enjeu est de savoir traduire ces principes en configurations concrètes et cohérentes, sans bloquer le travail des utilisateurs. Je poursuivrai cette veille pour observer les évolutions des solutions ZTNA, de Microsoft Entra et de la segmentation réseau.</p>
       </div>
 
       <a href="contact.html" class="btn btn-primary">Échanger sur cette veille</a>
     </div>
   </section>
-
-  <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
-
+  <button class="back-to-top" id="backToTop" aria-label="Retour en haut"><i class="fa-solid fa-chevron-up"></i></button>
   <script src="script.js"></script>
 </body>
 </html>
